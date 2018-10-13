@@ -90,8 +90,8 @@
     <pers.lbreak.myutils.view.SearchEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/search"
-        android:drawableRight="@drawable/search_delete"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawableRight="@drawable/icon_delete"
         android:background="@android:drawable/editbox_background_normal" />
     <pers.lbreak.myutils.view.BottomLayout
         android:id="@+id/layout"

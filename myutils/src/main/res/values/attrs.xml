@@ -20,7 +20,6 @@
         <attr name="text" format="reference|integer" /><!--文本数组-->
         <attr name="selectBg" format="reference|color" /><!--选中背景-->
         <attr name="bg" format="reference|color" /><!--默认背景-->
-
     </declare-styleable>
 
 </resources>

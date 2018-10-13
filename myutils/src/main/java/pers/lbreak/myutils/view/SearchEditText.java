@@ -44,7 +44,7 @@ public class SearchEditText extends android.support.v7.widget.AppCompatEditText 
         //  获取drawableRight,如果没有就使用默认的
         mClearDrawable = getCompoundDrawables()[2];
         if (mClearDrawable == null) {
-            mClearDrawable = getResources().getDrawable(R.drawable.search_delete);
+            mClearDrawable = getResources().getDrawable(R.drawable.icon_delete);
         }
 
         //  默认设置不可见
