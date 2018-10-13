@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyUtils</string>
+    <string name="text_font">font/text.ttf</string>
+    <string-array name="basicText">
+        <item>模块1</item>
+        <item>模块2</item>
+        <item>模块3</item>
+        <item>模块4</item>
+
+    </string-array>
+
+</resources>

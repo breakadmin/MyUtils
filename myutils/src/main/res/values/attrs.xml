@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="defaultDrawable">
+        <attr name="drawableWidth" format="dimension"/>
+        <attr name="drawableHeight" format="dimension"/>
+        <attr name="drawableClickable" format="boolean"/><!--是否为drawable添加点击效果-->
+        <attr name="drawableColor" format="color"/><!--drawable点击颜色-->
+        <attr name="backgroundClickable" format="boolean"/><!--是否为bg添加点击效果-->
+        <attr name="backgroundColor" format="color"/><!--bg点击颜色-->
+    </declare-styleable>
+
+    <declare-styleable name="iconView">
+        <attr name="srcColor" format="color"/><!--点击颜色-->
+    </declare-styleable>
+    <declare-styleable name="view">
+        <attr name="normalColor" format="color"/><!--默认颜色-->
+        <attr name="selectColor" format="color"/><!--点击颜色-->
+        <attr name="selectNum" format="integer" /><!--默认选择=中第一个-->
+        <attr name="viewNum" format="integer" /><!--数量-->
+        <attr name="text" format="reference|integer" /><!--文本数组-->
+        <attr name="selectBg" format="reference|color" /><!--选中背景-->
+        <attr name="bg" format="reference|color" /><!--默认背景-->
+
+    </declare-styleable>
+
+</resources>

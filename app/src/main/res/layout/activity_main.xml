@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="pers.lbreak.MainActivity">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <pers.lbreak.myutils.view.MyLabelText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_launcher_background"
+        app:drawableWidth="40dp"
+        style="@style/font"
+        app:drawableHeight="40dp"
+        app:drawableClickable="true"
+        android:layout_margin="@dimen/middle_padding"
+        android:text="设置字体" />
+    <pers.lbreak.myutils.view.MyLabelText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_launcher_background"
+        app:drawableWidth="40dp"
+        app:drawableHeight="40dp"
+        app:drawableColor="#00BFFF"
+        android:layout_margin="@dimen/middle_padding"
+        app:drawableClickable="true"
+        android:text="未设置字体" />
+</LinearLayout>
+
+    <pers.lbreak.myutils.view.MyLabelText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:drawableWidth="40dp"
+    app:drawableHeight="40dp"
+    android:drawableRight="@drawable/send_audio"
+    android:background="@drawable/send_bg_1"
+    app:drawableClickable="true"
+    app:drawableColor="#CD2626"
+    app:backgroundClickable="false"
+    app:backgroundColor="#00BFFF"
+    android:gravity="center"
+        android:text="Hello World!"  />
+    <pers.lbreak.myutils.view.MyLabelText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableWidth="40dp"
+        app:drawableHeight="40dp"
+        android:drawableRight="@drawable/send_audio"
+        android:background="@drawable/send_bg_1"
+        app:drawableClickable="true"
+        app:drawableColor="#CD2626"
+        app:backgroundClickable="true"
+        app:backgroundColor="#00BFFF"
+        android:gravity="center"
+        android:text="Hello World!" />
+    <pers.lbreak.myutils.view.IconView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/icon"
+        app:srcColor="#00BFFF"/>
+    <pers.lbreak.myutils.view.MyImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon"
+        android:clickable="true"
+        app:srcColor="#00BFFF"/>
+
+    <pers.lbreak.myutils.view.MyLabelText
+        android:id="@+id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableWidth="40dp"
+        app:drawableHeight="40dp"
+        android:drawableRight="@drawable/icon"
+        android:background="@drawable/send_bg_1"
+        app:drawableClickable="true"
+        app:drawableColor="#CD2626"
+        app:backgroundClickable="true"
+        app:backgroundColor="#00BFFF"
+        android:gravity="center"
+        android:text="Hello World!" />
+
+    <pers.lbreak.myutils.view.SearchEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search"
+        android:drawableRight="@drawable/search_delete"
+        android:background="@android:drawable/editbox_background_normal" />
+    <pers.lbreak.myutils.view.BottomLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        app:viewNum="4"
+        app:selectNum="5"
+        app:selectColor="@color/white"
+        app:normalColor="#00BFFF"
+        app:bg="@color/white"
+        app:selectBg="#CD2626"
+        app:text="@array/basicText"
+        android:layout_height="50dp"/>
+
+</LinearLayout>
