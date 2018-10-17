@@ -104,5 +104,10 @@
         app:selectBg="#CD2626"
         app:text="@array/basicText"
         android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/dialog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开弹窗"/>
 
 </LinearLayout>

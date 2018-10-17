@@ -30,4 +30,6 @@
     <dimen name="audio_width">20dp</dimen>
     <dimen name="audio_height">20dp</dimen>
 
+    <dimen name="loading">30dp</dimen>
+    <dimen name="loading_bg">140dp</dimen>
 </resources>

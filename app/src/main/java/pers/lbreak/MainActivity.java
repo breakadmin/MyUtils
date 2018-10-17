@@ -1,10 +1,11 @@
 package pers.lbreak;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
-
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -12,6 +13,7 @@ import butterknife.OnClick;
 import pers.lbreak.myutils.basic.BaseActivity;
 import pers.lbreak.myutils.utils.DisplayUtils;
 import pers.lbreak.myutils.view.BottomLayout;
+import pers.lbreak.myutils.view.LoadingDialog;
 import pers.lbreak.myutils.view.MyImageView;
 import pers.lbreak.myutils.view.MyLabelText;
 
@@ -26,6 +28,8 @@ public class MainActivity extends BaseActivity {
     MyImageView img;
     @BindView(R.id.layout)
     BottomLayout layout;
+    @BindView(R.id.dialog_btn)
+    Button dialogBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +43,9 @@ public class MainActivity extends BaseActivity {
         layout.setSelectListener(new BottomLayout.selectListener() {
             @Override
             public void selectItem(View view, int position) {
-                Toast.makeText(context, "点击了"+position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "点击了" + position, Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
 
 //        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
@@ -81,5 +83,20 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return super.onTouchEvent(event);
+    }
+
+    @OnClick(R.id.dialog_btn)
+    public void onViewClicked() {
+        LoadingDialog.Builder loadBuilder=new LoadingDialog.Builder(this)
+                .setMessage("加载中...")
+                .setCancelable(true)
+                .setTextColor(Color.WHITE)
+                .setTextSize(6)
+                .setDialogWidth(100)
+                .setCancelOutside(true);
+        LoadingDialog dialog=loadBuilder.create();
+        dialog.show();
+
+
     }
 }
