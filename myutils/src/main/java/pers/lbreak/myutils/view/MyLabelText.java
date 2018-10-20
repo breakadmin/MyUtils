@@ -28,17 +28,17 @@ public class MyLabelText extends android.support.v7.widget.AppCompatTextView {
         super(context, attrs);
         setClickable(true);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.defaultDrawable);
-        int width= (int) ta.getDimension(R.styleable.defaultDrawable_drawableWidth,w);
-        int height= (int) ta.getDimension(R.styleable.defaultDrawable_drawableHeight,w);
-        bgClick=ta.getBoolean(R.styleable.defaultDrawable_backgroundClickable,false);//是否为bg添加点击效果
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.MyLabelText);
+        int width= (int) ta.getDimension(R.styleable.MyLabelText_drawableWidth,w);
+        int height= (int) ta.getDimension(R.styleable.MyLabelText_drawableHeight,w);
+        bgClick=ta.getBoolean(R.styleable.MyLabelText_backgroundClickable,false);//是否为bg添加点击效果
         if (bgClick){//bg 点击颜色
-            bgColor=ta.getColor(R.styleable.defaultDrawable_backgroundColor,getResources().getColor(R.color.click_overlay_color));
+            bgColor=ta.getColor(R.styleable.MyLabelText_backgroundColor,getResources().getColor(R.color.click_overlay_color));
         }
 
-        drawableClick=ta.getBoolean(R.styleable.defaultDrawable_drawableClickable,false);//是否为drawable添加点击效果
+        drawableClick=ta.getBoolean(R.styleable.MyLabelText_drawableClickable,false);//是否为drawable添加点击效果
         if (drawableClick){//drawable 点击颜色
-            drawableColor=ta.getColor(R.styleable.defaultDrawable_drawableColor,getResources().getColor(R.color.colorAccent));
+            drawableColor=ta.getColor(R.styleable.MyLabelText_drawableColor,getResources().getColor(R.color.colorAccent));
         }
         ta.recycle();
         init(width,height, true,false);

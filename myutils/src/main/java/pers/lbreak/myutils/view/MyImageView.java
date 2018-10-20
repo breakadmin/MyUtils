@@ -20,8 +20,8 @@ public class MyImageView extends android.support.v7.widget.AppCompatImageView{
     public MyImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (this.isClickable()){
-            TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.iconView);
-            color=ta.getColor(R.styleable.iconView_srcColor,getResources().getColor(R.color.click_overlay_color));
+            TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.MyImageView);
+            color=ta.getColor(R.styleable.MyImageView_pressedColor,getResources().getColor(R.color.click_overlay_color));
             ta.recycle();
         }
 

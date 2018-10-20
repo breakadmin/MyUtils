@@ -39,24 +39,25 @@ public class BottomLayout extends LinearLayout  {
     public int getDefaultSelect(){
         return selectNum;
     }
+
     public BottomLayout(Context context) {
         super(context);
     }
 
     public BottomLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.view);
-        normalColor=ta.getColor(R.styleable.view_normalColor,normalColor);
-        selectColor=ta.getColor(R.styleable.view_selectColor,selectColor);
-        viewNum=ta.getInteger(R.styleable.view_viewNum,viewNum);
-        selectNum=ta.getInteger(R.styleable.view_selectNum,selectNum);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.BottomLayout);
+        normalColor=ta.getColor(R.styleable.BottomLayout_normalColor,normalColor);
+        selectColor=ta.getColor(R.styleable.BottomLayout_selectColor,selectColor);
+        viewNum=ta.getInteger(R.styleable.BottomLayout_viewNum,viewNum);
+        selectNum=ta.getInteger(R.styleable.BottomLayout_selectNum,selectNum);
         if (selectNum>viewNum){
          selectNum=0;
         }
-        bg=ta.getDrawable(R.styleable.view_bg);
-        selectBg=ta.getDrawable(R.styleable.view_selectBg);
+        bg=ta.getDrawable(R.styleable.BottomLayout_bg);
+        selectBg=ta.getDrawable(R.styleable.BottomLayout_selectBg);
 
-        nameRes=ta.getResourceId(R.styleable.view_text,R.array.basicText);
+        nameRes=ta.getResourceId(R.styleable.BottomLayout_text,R.array.basicText);
         name=getResources().getStringArray(nameRes);
 
 

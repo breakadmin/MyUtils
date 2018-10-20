@@ -29,8 +29,8 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
     public IconView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setClickable(true);
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.iconView);
-        color=ta.getColor(R.styleable.iconView_srcColor,getResources().getColor(R.color.click_overlay_color));
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.IconView);
+        color=ta.getColor(R.styleable.IconView_srcColor,getResources().getColor(R.color.click_overlay_color));
         ta.recycle();
     }
 

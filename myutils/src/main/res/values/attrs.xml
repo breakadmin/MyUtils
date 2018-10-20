@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="defaultDrawable">
+    <declare-styleable name="MyLabelText">
         <attr name="drawableWidth" format="dimension"/>
         <attr name="drawableHeight" format="dimension"/>
         <attr name="drawableClickable" format="boolean"/><!--是否为drawable添加点击效果-->
@@ -9,10 +9,15 @@
         <attr name="backgroundColor" format="color"/><!--bg点击颜色-->
     </declare-styleable>
 
-    <declare-styleable name="iconView">
+    <declare-styleable name="IconView">
         <attr name="srcColor" format="color"/><!--点击颜色-->
     </declare-styleable>
-    <declare-styleable name="view">
+
+    <declare-styleable name="MyImageView">
+        <attr name="pressedColor" format="color"/><!--点击颜色-->
+    </declare-styleable>
+
+    <declare-styleable name="BottomLayout">
         <attr name="normalColor" format="color"/><!--默认颜色-->
         <attr name="selectColor" format="color"/><!--点击颜色-->
         <attr name="selectNum" format="integer" /><!--默认选择=中第一个-->

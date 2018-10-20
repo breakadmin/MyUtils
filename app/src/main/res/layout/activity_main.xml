@@ -70,7 +70,7 @@
         android:layout_height="100dp"
         android:src="@drawable/icon"
         android:clickable="true"
-        app:srcColor="#00BFFF"/>
+        app:pressedColor="#00BFFF"/>
 
     <pers.lbreak.myutils.view.MyLabelText
         android:id="@+id/dialog"
@@ -109,5 +109,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="打开弹窗"/>
+
 
 </LinearLayout>
