@@ -1,5 +1,6 @@
 package pers.lbreak;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -30,6 +31,8 @@ public class MainActivity extends BaseActivity {
     BottomLayout layout;
     @BindView(R.id.dialog_btn)
     Button dialogBtn;
+    @BindView(R.id.btn)
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,27 +56,6 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.img, R.id.dialog})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img:
-                Toast.makeText(this, "点击", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.dialog:
-                if (c) {
-
-                    dialog.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.view, 0);
-                    dialog.init(30, 30, true, true);
-                    c = false;
-                } else {
-                    dialog.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon, 0);
-                    dialog.init(30, 30, true, true);
-
-                    c = true;
-                }
-                break;
-        }
-    }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -87,16 +69,40 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.dialog_btn)
     public void onViewClicked() {
-        LoadingDialog.Builder loadBuilder=new LoadingDialog.Builder(this)
+        LoadingDialog.Builder loadBuilder = new LoadingDialog.Builder(this)
                 .setMessage("加载中...")
                 .setCancelable(true)
                 .setTextColor(Color.WHITE)
                 .setTextSize(6)
                 .setDialogWidth(100)
                 .setCancelOutside(true);
-        LoadingDialog dialog=loadBuilder.create();
+        LoadingDialog dialog = loadBuilder.create();
         dialog.show();
 
 
+    }
+
+    @OnClick({R.id.dialog, R.id.dialog_btn, R.id.btn})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.dialog:
+                if (c) {
+
+                    dialog.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.view, 0);
+                    dialog.init(30, 30, true, true);
+                    c = false;
+                } else {
+                    dialog.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon, 0);
+                    dialog.init(30, 30, true, true);
+
+                    c = true;
+                }
+                break;
+            case R.id.dialog_btn:
+                break;
+            case R.id.btn:
+                startActivity(new Intent(MainActivity.this,ThumbActivity.class));
+                break;
+        }
     }
 }

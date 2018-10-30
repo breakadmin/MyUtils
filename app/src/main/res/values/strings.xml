@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyView</string>
     <!--<string-array name="text">-->
-        <!--<item>名称1</item>-->
-        <!--<item>名称2</item>-->
+    <!--<item>名称1</item>-->
+    <!--<item>名称2</item>-->
     <!--</string-array>-->
 </resources>
