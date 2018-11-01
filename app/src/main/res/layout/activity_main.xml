@@ -45,7 +45,7 @@
     app:backgroundClickable="false"
     app:backgroundColor="#00BFFF"
     android:gravity="center"
-        android:text="Hello World!"  />
+    android:text="Hello World!"  />
     <pers.lbreak.myutils.view.MyLabelText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,6 +59,11 @@
         app:backgroundColor="#00BFFF"
         android:gravity="center"
         android:text="Hello World!" />
+    <pers.lbreak.myutils.view.MyLabelText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:textClickColor="@color/colorAccent"
+        android:text="未设置字体" />
     <pers.lbreak.myutils.view.IconView
         android:layout_width="50dp"
         android:layout_height="50dp"

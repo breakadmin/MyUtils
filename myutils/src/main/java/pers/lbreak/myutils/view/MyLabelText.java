@@ -1,7 +1,10 @@
 package pers.lbreak.myutils.view;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
@@ -17,6 +20,8 @@ public class MyLabelText extends android.support.v7.widget.AppCompatTextView {
     Drawable[] drawable = getCompoundDrawables();
     Drawable bg=getBackground();
     int bgColor;
+    ColorStateList textColor=getTextColors();
+    int textClickColor;
     boolean bgClick=false;
     int drawableColor;
     boolean drawableClick=false;
@@ -32,6 +37,7 @@ public class MyLabelText extends android.support.v7.widget.AppCompatTextView {
         int width= (int) ta.getDimension(R.styleable.MyLabelText_drawableWidth,w);
         int height= (int) ta.getDimension(R.styleable.MyLabelText_drawableHeight,w);
         bgClick=ta.getBoolean(R.styleable.MyLabelText_backgroundClickable,false);//是否为bg添加点击效果
+        textClickColor=ta.getColor(R.styleable.MyLabelText_textClickColor,textClickColor);//文字点击颜色
         if (bgClick){//bg 点击颜色
             bgColor=ta.getColor(R.styleable.MyLabelText_backgroundColor,getResources().getColor(R.color.click_overlay_color));
         }
@@ -42,6 +48,7 @@ public class MyLabelText extends android.support.v7.widget.AppCompatTextView {
         }
         ta.recycle();
         init(width,height, true,false);
+
 
     }
 
@@ -74,7 +81,17 @@ public class MyLabelText extends android.support.v7.widget.AppCompatTextView {
     @Override
     public void setPressed(boolean pressed) {
         super.setPressed(pressed);
+        //文字点击效果
+        if (textClickColor!=0){
+            if (pressed){
+                ColorStateList csl= ColorStateList.valueOf(textClickColor);
+                setTextColor(csl);
+            }else{
+                setTextColor(textColor);
+            }
 
+        }
+        //drawable点击效果
         if (drawableClick){//drawable 点击效果
             //当src图片为Null，获取背景图片
             for (int i = 0; i < drawable.length; i++) {
@@ -85,16 +102,16 @@ public class MyLabelText extends android.support.v7.widget.AppCompatTextView {
                         drawable[i].clearColorFilter();
                     }
                 }
-                invalidate();
             }
         }
+
         if(bgClick&&bg!=null){
             if (pressed) {
                 bg.setColorFilter(bgColor, PorterDuff.Mode.MULTIPLY);
             } else {
                 bg.clearColorFilter();
             }
-            invalidate();
+
         }
 
     }

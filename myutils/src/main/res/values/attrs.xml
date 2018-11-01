@@ -7,6 +7,7 @@
         <attr name="drawableColor" format="color"/><!--drawable点击颜色-->
         <attr name="backgroundClickable" format="boolean"/><!--是否为bg添加点击效果-->
         <attr name="backgroundColor" format="color"/><!--bg点击颜色-->
+        <attr name="textClickColor" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="IconView">
