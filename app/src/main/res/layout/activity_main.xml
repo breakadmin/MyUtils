@@ -31,6 +31,7 @@
         android:layout_margin="@dimen/middle_padding"
         app:drawableClickable="true"
         android:text="未设置字体" />
+
 </LinearLayout>
 
     <pers.lbreak.myutils.view.MyLabelText
@@ -46,6 +47,7 @@
     app:backgroundColor="#00BFFF"
     android:gravity="center"
     android:text="Hello World!"  />
+
     <pers.lbreak.myutils.view.MyLabelText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,16 +61,19 @@
         app:backgroundColor="#00BFFF"
         android:gravity="center"
         android:text="Hello World!" />
+
     <pers.lbreak.myutils.view.MyLabelText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:textClickColor="@color/colorAccent"
         android:text="未设置字体" />
+
     <pers.lbreak.myutils.view.IconView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/icon"
         app:srcColor="#00BFFF"/>
+
     <pers.lbreak.myutils.view.MyImageView
         android:id="@+id/img"
         android:layout_width="100dp"
@@ -76,7 +81,28 @@
         android:src="@drawable/icon"
         android:clickable="true"
         app:pressedColor="#00BFFF"/>
+    <pers.lbreak.myutils.view.MyLabelText
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableWidth="40dp"
+        app:drawableHeight="40dp"
+        android:drawableLeft="@drawable/ic_left_black"
+        app:drawableClickable="true"
+        app:drawableColor="#CD2626"
+        android:gravity="center"
+        android:text="svg返回" />
+    <pers.lbreak.myutils.view.MyLabelText
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableWidth="40dp"
+        app:drawableHeight="40dp"
+        android:drawableLeft="@drawable/icon_arrow_left"
+        app:drawableClickable="true"
+        app:drawableColor="#CD2626"
+        android:gravity="center"
+        android:text="位图返回" />
     <pers.lbreak.myutils.view.MyLabelText
         android:id="@+id/dialog"
         android:layout_width="wrap_content"
@@ -120,4 +146,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="查看视频缩略图"/>
+
 </LinearLayout>
