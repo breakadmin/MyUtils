@@ -38,6 +38,11 @@ public class AudioUtils {
             throw new Exception("文件不存在");
         }
     }
+    /**
+     * 获取录音时长
+     * @param mUri 地址
+     * @throws Exception
+     */
     public  String getDuration(String mUri){
         String duration=null;
         android.media.MediaMetadataRetriever mmr = new android.media.MediaMetadataRetriever();
