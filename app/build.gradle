@@ -42,7 +42,16 @@ dependencies {
 //    //rxCache
 //    implementation 'com.github.VictorAlbertos.RxCache:runtime:1.8.1-2.x'
 //    implementation 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3'
-
+    compile 'com.android.support:design:26.+'
     compile project(path: ':myutils')
 
+}
+android {
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }

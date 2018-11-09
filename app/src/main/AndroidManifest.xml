@@ -3,6 +3,7 @@
     package="pers.lbreak">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".myutils.basic.app"
         android:allowBackup="true"
@@ -11,17 +12,13 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".ThumbActivity">
-
-        </activity>
-        <activity android:name=".AudioActivity" >
-
-        </activity>
-
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ThumbActivity"></activity>
+        <activity android:name=".AudioActivity"></activity>
         <activity android:name=".QRActivity">
+
+        </activity>
+        <activity android:name=".letter.LetterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
