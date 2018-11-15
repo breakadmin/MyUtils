@@ -6,7 +6,7 @@ import java.io.Serializable;
 import pers.lbreak.myutils.utils.ChineseLetterUtil;
 
 /**
- * Created by 惠普 on 2018-01-14.
+ * 联系人
  */
 
 public class Contact implements Serializable{

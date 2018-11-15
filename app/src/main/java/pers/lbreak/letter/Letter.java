@@ -1,9 +1,8 @@
 package pers.lbreak.letter;
 
 /**
- * Created by 惠普 on 2018-05-07.
+ * 字母
  */
-
 public class Letter {
 
     String Letter;
